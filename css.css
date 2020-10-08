@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    line-height: 1.2;
+    background-color: #fff;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+main {
+    height: calc(100vh - 50px);
+    /*background-color: blue;*/
+}
+main{
+    overflow: scroll;
+}
+main section {
+    display: none;
+}
+main section:first-child{
+    display: block;
+}
+
+footer {
+    height: 50px;
+    position: absolute;
+    /*background-color: red;*/
+    width: 100%;
+    display: flex;
+    text-align: center;
+    border-top: solid 2px #ccc;
+}
+footer>div {
+    flex:1;
+}
+footer span {
+    padding-top: 5px;
+    display: block;
+}
+.active {
+    color: #FF5722;
+}
+
+/*调用*/
+
+.item {
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.item>a{
+    display: flex;
+}
+.order>img {
+    width: 70px;
+
+}
+.order {
+    display: flex;
+    align-items: center;
+}
+.detail {
+    padding-left: 15px;
+}
+.detail>h2 {
+    font-size: 16px;
+}
+.detail>div{
+    padding-top: 5px;
+    color: #696969;
+}
+.detail .detail_average {
+    color: red;
+    font-weight:bold;
+}
+
+.loading {
+    margin-top: 5px;
+    text-align: center;
+    display: inline-block;
+    animation: 1s rotate linear infinite;
+}
+.loading{
+    display: none;
+}
+@keyframes rotate{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(90deg);}
+    50%{transform:rotate(180deg);}
+    75%{transform:rotate(270deg);}
+    100%{transform:rotate(360deg);}
+}
+#search .search_area{
+    border-bottom: 1px solid #cccccc;
+}
+#search .search_area input{
+    width: 75%;
+    padding: 7px 5px;
+    outline-style: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 10px 10px 10px 15px;
+}
+#search .search_area input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+#search .search_area button {
+    width: 15%;
+    padding: 5px 10px;
+    background-color: orange;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+}
+/*#search .search_area a:hover {cursor:pointer}*/
