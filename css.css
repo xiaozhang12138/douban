@@ -1,125 +1,148 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-size: 12px;
-    line-height: 1.2;
-    background-color: #fff;
-}
-a {
-    text-decoration: none;
-    color: #333;
-}
-main {
-    height: calc(100vh - 50px);
-    /*background-color: blue;*/
-}
-main{
-    overflow: scroll;
-}
-main section {
-    display: none;
-}
-main section:first-child{
-    display: block;
+
+
+main>section {
+  height: calc(100% - 45px);
+  padding: 10px;
+  background: #fff;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  /*ios 上增加弹性*/
 }
 
-footer {
-    height: 50px;
-    position: absolute;
-    /*background-color: red;*/
-    width: 100%;
-    display: flex;
-    text-align: center;
-    border-top: solid 2px #ccc;
-}
-footer>div {
-    flex:1;
-}
-footer span {
-    padding-top: 5px;
-    display: block;
-}
-.active {
-    color: #FF5722;
+main>section {
+  display: none;
 }
 
-/*调用*/
+main section:first-child {
+  display: block;
+}
 
 .item {
-    border-bottom: 1px solid #ccc;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: flex;
 }
 
-.item>a{
-    display: flex;
+.item .cover,
+.item .cover img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
 }
-.order>img {
-    width: 70px;
 
+.item>a {
+  display: flex;
 }
-.order {
-    display: flex;
-    align-items: center;
+
+.item .order {
+  display: flex;
+  align-items: center;
 }
-.detail {
-    padding-left: 15px;
+
+.item .order span {
+  padding: 0 4px;
+  color: #fff;
+  background: #f14915;
 }
-.detail>h2 {
-    font-size: 16px;
+
+.item .detail {
+  padding-left: 10px;
 }
-.detail>div{
-    padding-top: 5px;
-    color: #696969;
+
+.item .detail h2 {
+  font-size: 18px;
 }
-.detail .detail_average {
-    color: red;
-    font-weight:bold;
+
+.item .detail .description {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+
+.item .detail .extra {
+  color: #999;
+  margin-top: 4px;
+}
+
+.item .detail .score {
+  color: #FF5722;
 }
 
 .loading {
-    margin-top: 5px;
-    text-align: center;
-    display: inline-block;
-    animation: 1s rotate linear infinite;
+  text-align: center;
+  padding-top: 10px;
+  display: none;
 }
-.loading{
-    display: none;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
-@keyframes rotate{
-    0%{transform:rotate(0deg);}
-    25%{transform:rotate(90deg);}
-    50%{transform:rotate(180deg);}
-    75%{transform:rotate(270deg);}
-    100%{transform:rotate(360deg);}
+
+#search {
+  height: calc(100% - 45px);
 }
-#search .search_area{
-    border-bottom: 1px solid #cccccc;
+
+section .search-area {
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
 }
-#search .search_area input{
-    width: 75%;
-    padding: 7px 5px;
-    outline-style: none;
-    border-radius: 8px;
-    font-size: 16px;
-    margin: 10px 10px 10px 15px;
+
+section .search-area input {
+  width: calc(100% - 50px);
+  padding: 8px;
+  background-color: #eee;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
+  outline: none;
 }
-#search .search_area input:focus{
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+
+section .search-area .button {
+  position: absolute;
+  right: 0;
+  padding: 8px 10px;
+  background: #FF5722;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
 }
-#search .search_area button {
-    width: 15%;
-    padding: 5px 10px;
-    background-color: orange;
-    font-size: 16px;
-    color: white;
-    border-radius: 8px;
+
+.loading .iconfont {
+  display: inline-block;
+  animation: 1s rotate linear infinite;
 }
-/*#search .search_area a:hover {cursor:pointer}*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+}
+
+footer>div {
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  padding-top: 6px;
+}
+
+footer .active {
+  color: #FF5722;
+}
+
+footer>div>span {
+  display: block;
+}
